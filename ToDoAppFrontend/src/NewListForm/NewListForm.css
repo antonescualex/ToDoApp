@@ -1,0 +1,130 @@
+.new-list-page {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+  background: burlywood;
+}
+
+.new-list-card {
+  width: min(100%, 440px);
+  padding: clamp(28px, 6vw, 48px);
+  box-sizing: border-box;
+  background: #fff8e9;
+  border: 3px solid #df8c0f;
+  border-radius: 30px;
+  box-shadow: 8px 8px 0 #b96d10;
+}
+
+.new-list-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.new-list-title {
+  margin: 0;
+  color: #e4a342;
+  font-size: clamp(2rem, 7vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 rgba(223, 140, 15, 0.35);
+}
+
+.new-list-subtitle {
+  margin: 12px 0 0;
+  color: #765d3a;
+  line-height: 1.45;
+}
+
+.new-list-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.new-list-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #3e2a13;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.new-list-field input {
+  width: 100%;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  color: #3e2a13;
+  font: inherit;
+  font-weight: 400;
+  background: #fffdf7;
+  border: 2px solid #e8c585;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.new-list-field input::placeholder {
+  color: #a88b60;
+}
+
+.new-list-field input:focus {
+  border-color: #df8c0f;
+  box-shadow: 0 0 0 4px rgba(228, 163, 66, 0.25);
+}
+
+.new-list-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create-list-button,
+.cancel-list-button {
+  width: 100%;
+  padding: 13px 18px;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.create-list-button {
+  color: #fff8e9;
+  background: #e4a342;
+  border: 3px solid #df8c0f;
+  box-shadow: 4px 4px 0 #b96d10;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.create-list-button:hover {
+  background: #edae50;
+}
+
+.create-list-button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #b96d10;
+}
+
+.cancel-list-button {
+  color: #765d3a;
+  background: transparent;
+  border: 2px solid #e8c585;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.cancel-list-button:hover {
+  color: #3e2a13;
+  background: #fffdf7;
+  border-color: #df8c0f;
+}
+
+.create-list-button:focus-visible,
+.cancel-list-button:focus-visible {
+  outline: 3px solid #3e2a13;
+  outline-offset: 3px;
+}

@@ -1,0 +1,54 @@
+.list-item {
+  width: 100%;
+}
+
+.todo-list-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 80px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  color: #56360d;
+  text-align: left;
+  background: #f7dfad;
+  border: 1px solid #dfad58;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(107, 65, 10, 0.14);
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+@media (hover: hover) {
+  .todo-list-card:hover {
+    background: #fbe8bf;
+    border-color: #c98118;
+    box-shadow: 0 6px 16px rgba(107, 65, 10, 0.16);
+    transform: translateY(-2px);
+  }
+}
+
+.todo-list-card:active {
+  box-shadow: 0 1px 3px rgba(107, 65, 10, 0.14);
+  transform: translateY(1px);
+}
+
+.todo-list-card:focus-visible {
+  outline: 3px solid #3e2a13;
+  outline-offset: 3px;
+}
+
+.name {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .todo-list-card {
+    transition: none;
+  }
+}

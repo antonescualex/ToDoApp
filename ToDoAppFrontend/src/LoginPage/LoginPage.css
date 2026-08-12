@@ -1,0 +1,145 @@
+.login-page {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: burlywood;
+}
+
+.login-card {
+  width: min(100%, 440px);
+  padding: clamp(28px, 6vw, 48px);
+  box-sizing: border-box;
+  background: #fff8e9;
+  border: 3px solid #df8c0f;
+  border-radius: 30px;
+  box-shadow: 8px 8px 0 #b96d10;
+}
+
+.login-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.login-title {
+  margin: 0;
+  color: #e4a342;
+  font-size: clamp(2rem, 7vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 rgba(223, 140, 15, 0.35);
+}
+
+.login-subtitle {
+  margin: 12px 0 0;
+  color: #765d3a;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #3e2a13;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  color: #3e2a13;
+  font: inherit;
+  font-weight: 400;
+  background: #fffdf7;
+  border: 2px solid #e8c585;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.login-field input::placeholder {
+  color: #a88b60;
+}
+
+.login-field input:focus {
+  border-color: #df8c0f;
+  box-shadow: 0 0 0 4px rgba(228, 163, 66, 0.25);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px 18px;
+  color: #fff8e9;
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: #e4a342;
+  border: 3px solid #df8c0f;
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 #b96d10;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.submit-button:hover {
+  background: #edae50;
+}
+
+.submit-button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #b96d10;
+}
+
+.submit-button:focus-visible {
+  outline: 3px solid #3e2a13;
+  outline-offset: 3px;
+}
+
+.register-prompt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  color: #765d3a;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.register-button {
+  padding: 6px 11px;
+  color: #3e2a13;
+  font: inherit;
+  font-weight: 800;
+  background: transparent;
+  border: 2px solid #df8c0f;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.register-button:hover {
+  color: #fff8e9;
+  background: #e4a342;
+}
+
+.register-button:active {
+  transform: translateY(1px);
+}
+
+.register-button:focus-visible {
+  outline: 3px solid rgba(228, 163, 66, 0.55);
+  outline-offset: 2px;
+}
