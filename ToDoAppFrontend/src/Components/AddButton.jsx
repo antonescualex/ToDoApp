@@ -5,31 +5,42 @@ const Button = () => {
     <StyledWrapper>
       <button className="Btn" type="button" aria-label="Creeaza o lista noua">
         <span className="sign">+</span>
-        <span className="text">Add</span>
+        <span className="text">Create</span>
       </button>
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div`
-  position: fixed;
-  right: 28px;
-  bottom: 28px;
+  --button-size: clamp(48px, 7vw, 64px);
+  --expanded-size: clamp(
+    calc(var(--button-size) * 2.1),
+    18vw,
+    calc(var(--button-size) * 2.4)
+  );
+
+  position: absolute;
+  right: clamp(14px, 3vw, 28px);
+  bottom: clamp(14px, 3vw, 28px);
   z-index: 10;
 
   .Btn {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 64px;
-    height: 64px;
-    border: 3px solid #df8c0f;
-    border-radius: 18px;
+    width: var(--button-size);
+    height: var(--button-size);
+
+    border: clamp(2px, 0.3vw, 3px) solid #df8c0f;
+    border-radius: calc(var(--button-size) * 0.28);
+
     cursor: pointer;
     position: relative;
     overflow: hidden;
     background-color: #e4a342;
-    box-shadow: 4px 4px 0 #b96d10;
+    box-shadow: calc(var(--button-size) * 0.06) calc(var(--button-size) * 0.06)
+      0 #b96d10;
+
     transition:
       width 0.3s ease,
       transform 0.2s ease;
@@ -38,7 +49,7 @@ const StyledWrapper = styled.div`
   .sign {
     width: 100%;
     color: #fff8e9;
-    font-size: 2.7rem;
+    font-size: calc(var(--button-size) * 0.68);
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -52,15 +63,16 @@ const StyledWrapper = styled.div`
     width: 0;
     opacity: 0;
     color: #fff8e9;
-    font-size: 1.1rem;
+    font-size: calc(var(--button-size) * 0.27);
     font-weight: 700;
+
     transition:
       width 0.3s ease,
       opacity 0.2s ease;
   }
 
   .Btn:hover {
-    width: 170px;
+    width: var(--expanded-size);
   }
 
   .Btn:hover .sign {

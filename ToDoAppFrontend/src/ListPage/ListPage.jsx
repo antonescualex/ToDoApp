@@ -1,18 +1,22 @@
 import "./ListPage.css";
-import AddTaskButton from "../Components/AddTaskButton.jsx";
+import AddListButton from "../Components/AddButton.jsx";
 import Task from "../Task/Task.jsx";
+import LogoutButton from "../Components/BackButton.jsx";
 
 export default function ListPage() {
   return (
     <div className="contents">
       <div className="title">
-        <h className="title-text">Lista</h>
+        <h1 className="title-text">Lista</h1>
       </div>
       <div className="separation-line"></div>
       <ul className="tasks">
         <Task />
+        <Task />
+        <Task />
       </ul>
-      <AddTaskButton />
+      <AddListButton />
+      <LogoutButton />
     </div>
   );
 }

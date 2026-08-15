@@ -1,4 +1,5 @@
 .task {
+  container-type: inline-size;
   display: flex;
   align-items: center;
   gap: 22px;
@@ -27,11 +28,11 @@
   flex: 1;
   flex-direction: column;
   min-width: 0;
-  gap: 7px;
+  gap: 1px;
 }
 
 .task-title {
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.2cqi, 1.1rem);
   font-weight: 700;
   line-height: 1.25;
   overflow-wrap: anywhere;
@@ -39,7 +40,7 @@
 
 .task-description {
   color: #765d3a;
-  font-size: clamp(0.85rem, 2vw, 1rem);
+  font-size: clamp(0.75rem, 1.8cqi, 0.9rem);
   line-height: 1.4;
   overflow-wrap: anywhere;
 }
