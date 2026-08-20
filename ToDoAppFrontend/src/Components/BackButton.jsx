@@ -82,7 +82,7 @@ const StyledWrapper = styled.div`
 export default function BackButton() {
   return (
     <StyledWrapper>
-      <button className="Btn" type="button" aria-label="Înapoi">
+      <button className="Btn" type="button" aria-label="Back">
         <span className="sign">◀</span>
         <span className="text">Back</span>
       </button>

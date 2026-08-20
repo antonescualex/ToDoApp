@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-const Checkbox = ({
-  completed = false,
-  label = "Marcheaza task-ul ca finalizat",
-}) => {
+const Checkbox = ({ completed = false, label = "Finalize the task" }) => {
   return (
     <StyledWrapper>
       <label className="container">

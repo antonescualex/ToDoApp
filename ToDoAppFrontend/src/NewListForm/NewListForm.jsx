@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./NewListForm.css";
 
 export default function NewListForm({ onCreate, onCancel }) {
   const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -12,14 +14,19 @@ export default function NewListForm({ onCreate, onCancel }) {
 
     onCreate?.(trimmedName);
     setName("");
+    navigate("/");
   }
 
   return (
     <main className="new-list-page">
       <section className="new-list-card" aria-labelledby="new-list-title">
         <header className="new-list-header">
-          <h1 id="new-list-title" className="new-list-title">New list</h1>
-          <p className="new-list-subtitle">Give your list a clear, memorable name.</p>
+          <h1 id="new-list-title" className="new-list-title">
+            New list
+          </h1>
+          <p className="new-list-subtitle">
+            Give your list a clear, memorable name.
+          </p>
         </header>
 
         <form className="new-list-form" onSubmit={handleSubmit}>
@@ -39,8 +46,16 @@ export default function NewListForm({ onCreate, onCancel }) {
           </label>
 
           <div className="new-list-actions">
-            <button className="create-list-button" type="submit">Create list</button>
-            <button className="cancel-list-button" type="button" onClick={onCancel}>Cancel</button>
+            <button className="create-list-button" type="submit">
+              Create list
+            </button>
+            <button
+              className="cancel-list-button"
+              type="button"
+              onClick={() => navigate(-1)}
+            >
+              Cancel
+            </button>
           </div>
         </form>
       </section>

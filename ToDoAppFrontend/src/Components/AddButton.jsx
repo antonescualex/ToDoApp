@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
-const Button = () => {
+const Button = ({ onClick, label = "Create" }) => {
   return (
     <StyledWrapper>
-      <button className="Btn" type="button" aria-label="Creeaza o lista noua">
+      <button
+        className="Btn"
+        type="button"
+        aria-label={label}
+        onClick={onClick}
+      >
         <span className="sign">+</span>
-        <span className="text">Create</span>
+        <span className="text">{label}</span>
       </button>
     </StyledWrapper>
   );

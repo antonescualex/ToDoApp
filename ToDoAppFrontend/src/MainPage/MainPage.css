@@ -83,3 +83,33 @@
     box-shadow: 5px 5px 0 #b96d10;
   }
 }
+
+.empty-state {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: calc(
+    clamp(48px, 7vw, 64px) + clamp(14px, 3vw, 28px) + 12px
+  );
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.empty-state-title {
+  margin: 0 0 8px;
+  color: #df8c0f;
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 800;
+}
+
+.empty-state-message {
+  max-width: 320px;
+  margin: 0;
+  color: #8d6b3b;
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  line-height: 1.5;
+}
